@@ -8,6 +8,8 @@ Routes Usadas
 Users
 GET  localhost:5000/api/v1/users
 POST localhost:5000/api/v1/users/register
+POST localhost:5000/api/v1/users/conversation/double
+POST localhost:5000/api/v1/users/conversation/group
 POST localhost:5000/api/v1/users/conversation
 GET  localhost:5000/api/v1/users/1/conversation
 

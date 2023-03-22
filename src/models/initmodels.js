@@ -17,11 +17,11 @@ const initModels = ()=>{
     Conversation.hasMany(Message,{foreignKey:'conversationId'})
     Message.belongsTo(Conversation,{foreignKey:'conversationId'})
 
-    Users.belongsTo(Participant,{foreignKey:'userId'})
-    Participant.hasMany(Users,{foreignKey:'userId'})
+    Users.hasMany(Participant,{foreignKey:'userId'})
+    Participant.belongsTo(Users,{foreignKey:'userId'})
 
-    Conversation.belongsTo(Participant,{foreignKey:'conversationId'})
-    Participant.hasMany(Conversation,{foreignKey:'conversationId'})
+    Conversation.hasMany(Participant,{foreignKey:'conversationId'})
+    Participant.belongsTo(Conversation,{foreignKey:'conversationId'})
 
     Users.hasMany(Conversation,{foreignKey:'authorId'})
     Conversation.belongsTo(Users,{foreignKey:'authorId'})
